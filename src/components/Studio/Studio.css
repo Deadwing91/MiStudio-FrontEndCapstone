@@ -1,0 +1,115 @@
+.room-name {
+  display: flex;
+  font-family:'Island Moments', cursive;
+  justify-content: center;
+  letter-spacing: 26px;
+  font-size: 150px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  
+  
+}
+
+.filter {
+  display: flex;
+}
+
+.guitars {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  
+
+  
+  
+}
+
+.guitar_room {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 350px;
+  gap: 20px 15px;
+}
+
+
+.guitar-item-card {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  background-color:rgba(80, 80, 80, 0.9);
+  border: 2px solid rgb(0, 0, 0);
+  font-size: 20px;
+  color: white;
+  margin: 10px;
+  padding: 3px;
+  border-radius: 10px;
+  
+}
+.item-img {
+  width:350px;
+  height:520px;
+  margin: 6px;
+  
+  /* box-shadow: 4px 3px 4px gray; */
+ 
+}
+.brand-model-text {
+  text-align: center;
+}
+.add-studio-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.card-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+}
+.edit-delete {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+margin: 10px;
+
+}
+.form-group {
+padding-left: 300px;
+padding-right: 300px;
+color: white!important;
+text-shadow: 2px 2px rgb(0, 0, 0);
+font-size: 30px!important;
+}
+
+.form-control {
+padding: 30px!important;
+color: white!important;
+border-color: black!important;
+border-width: 1px!important;
+background-color: rgba(72, 72, 72, 0.4)!important;
+}
+
+.add-filter {
+display: flex;
+flex-direction: row!important;
+margin-left: 20px;
+margin-right: 20px;
+justify-content:space-between
+}
+.search {
+margin: 20px;
+}
+
+
+.footer {
+position:absolute;
+left:0;
+bottom:0;
+right:0;
+padding: 100px;
+}

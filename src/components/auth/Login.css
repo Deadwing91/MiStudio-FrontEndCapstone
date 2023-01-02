@@ -1,0 +1,128 @@
+
+
+.h1, h1 {
+    font-size: 2.5rem;
+}
+
+.sign-in {
+    margin-top: 200px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.sign-in-button {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 330px;
+    justify-content: center;
+    
+}
+
+.sign-in-pass {
+    padding-top: 10px;
+}
+.link--sign-in {
+    margin-right: 40px;
+}
+
+fieldset {
+    display: flex;
+    min-width: 0;
+    padding: 1rem 0;
+    margin: 0;
+    border: 0;
+    justify-content: center;
+    
+}
+
+.form--login {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form--login > fieldset > input[type="email"] {
+    width: 25em;
+}
+
+.label--login {
+    width: 8rem;
+    display: inline-block;
+}
+
+.login-form-control {
+    display: block;
+    width: 94%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: 30px .75rem;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    color: #ffffff;
+    border-color: rgba(75, 75, 75, 0.3) ;
+    background-color: rgba(42, 42, 42, 0.3);
+    background-clip: padding-box;
+    border-radius: 30px;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.container--login {
+    text-align: center;
+
+}
+
+.form--login {
+    background-position-x: right;
+    z-index: 1;
+    min-width: 45rem;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}
+
+.register{
+    display: block;
+    width: 94%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: 30px .75rem;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    text-align: center;
+    color: #ffffff;
+
+}
+
+.register-field {
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-top: 30px;
+}
+
+
+.button--close {
+    position: relative;
+    bottom: -2rem;
+}
+
+.register-name {
+
+    color: white;
+    font-size: larger;
+    font-weight: 600; 
+}
+
+.form-control {
+ text-align: center;
+ color: #ffffff!important;
+ font-size: 30px!important;
+ font-weight: 500!important;
+ border-radius: 50px!important;
+ width: auto;
+}
+
+::placeholder{
+   
+    color: rgb(130, 130, 130);
+    text-shadow: 1px 1px rgb(0, 0, 0);
+}

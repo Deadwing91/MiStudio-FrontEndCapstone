@@ -1,0 +1,41 @@
+
+.navbar__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+
+.navbar {
+    flex: auto;
+    flex-wrap: nowrap!important;
+    padding: 0!important;
+    background-color: rgb(0, 0, 0);
+    justify-content: space-evenly!important;
+    margin-bottom: 0;
+}
+
+.navbar__item {
+    flex: auto;
+    list-style-type: none;
+}
+.navbar__link {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-family:'Junge', serif;
+    font-size: 23px;
+    
+    justify-content: space-evenly;
+}
+
+.navbar__link:hover {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.navbar__logout {
+    margin-left: auto;
+}
+

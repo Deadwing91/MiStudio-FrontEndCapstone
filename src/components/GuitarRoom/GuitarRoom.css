@@ -1,0 +1,144 @@
+.room-name {
+    display: flex;
+    font-family:'Island Moments', cursive;
+    justify-content: center;
+    letter-spacing: 26px;
+    font-size: 150px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    
+    
+}
+
+.filter {
+    display: flex;
+}
+
+.guitars {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    
+
+    
+    
+}
+
+.guitar_room {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 350px;
+    gap: 20px 15px;
+}
+
+  
+.guitar-item-card {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    background-color:rgba(75, 75, 75, 0.9);
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    margin: 10px;
+    padding: px;
+    border-radius: 10px;
+    
+  }
+.item-img {
+    width:350px;
+    height:520px;
+    margin: 6px;
+    
+    /* box-shadow: 4px 3px 4px gray; */
+   
+  }
+  .brand-model-text {
+    text-align: center;
+  }
+  .add-studio-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+ }
+  .card-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+ }
+ .edit-delete {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px;
+
+ }
+ .form-group {
+  color: white!important;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  font-size: 30px!important;
+ }
+
+ .form-control {
+  padding-left: 30px!important;
+  color: white!important;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+  border-color: black!important;
+  border-width: 1px!important;
+  background-color: rgba(72, 72, 72, 0.9)!important;
+  padding-right: 50px!important;
+  padding-left: 50px!important;
+ }
+
+
+ .add-filter {
+  display: flex;
+  flex-direction: row!important;
+  margin-left: 20px;
+  margin-right: 20px;
+  justify-content:space-between
+ }
+ .add-edit-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+  padding-top: 40px;
+  padding-bottom: 305px;
+ }
+
+
+ .search {
+  margin: 20px;
+ }
+
+ .note-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 155px;
+ }
+
+ .type_selector {
+  margin-top: 10px;
+  margin-right: 5px;
+ }
+
+ .profile__title {
+  display: flex;
+  font-family: "Patua One", serif;
+  letter-spacing: 2px;
+  font-size: 50px!important;
+  color: white;
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  justify-content: space-evenly;
+  padding-top: 75px;
+  
+
+ }

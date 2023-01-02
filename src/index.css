@@ -1,13 +1,93 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    monospace; 
+}
+
+.studio {
+  background-image: url(AC+1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 100%;
+    background-attachment: fixed;
+    padding-bottom: 741px;
+}
+
+.guitarRoom {
+  background-image: url(Guitar_Room.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 100%;
+    background-attachment: fixed;
+    padding-bottom: 630px;
+}
+
+.drumRoom {
+  background-image: url(bac93b77369900871ddc8f7b756f3dba.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100%;
+  background-attachment: fixed;
+  padding-bottom: 630px;
+}
+
+.micLocker {
+  background-image: url(BB_mic_Studio.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100%;
+  background-attachment: fixed;
+  padding-bottom: 630px;
+}
+
+.synthRoom {
+  background-image: url(TONTO-3_crBrandonWallis.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100%;
+  background-attachment: fixed;
+  padding-bottom: 630px;
+
+}
+
+.loginPage {
+  background-image: url(MiStudio\ Login\ Page.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100%;
+  background-attachment: fixed;
+  padding-bottom: 50px;
+}
+
+.studioTasks {
+  background-image: url(MiStudio\ Login\ Page.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100%;
+  background-attachment: fixed;
+  padding-bottom: 471px;
+}
+
+.taskCreate {
+  background-image: url(MiStudio\ Login\ Page.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  min-height: 100%;
+  background-attachment: fixed;
+  padding-bottom: 96px;
 }

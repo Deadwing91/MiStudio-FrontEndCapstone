@@ -1,0 +1,55 @@
+.tickets {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 172px;
+}
+
+
+.ticket {
+    background-color: rgba(95, 95, 95, 0.9);
+    border: 1px solid rgb(37, 31, 37);
+    padding: 2rem;
+    margin: 5rem;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 2px rgb(0, 0, 0);
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+.newTask {
+    margin-left: 80px;
+}
+
+.ticketLink {
+    color: gold;
+}
+
+.ticket__delete {
+    margin-left: auto;
+    background-color: lightcoral;
+}
+
+.ticket__finish {
+    margin-left: auto;
+}
+
+.ticket__footer {
+    display: flex;
+    padding: 1rem 0 0 0;
+    border-top: 1px dashed darkmagenta;
+    margin: 1rem 0 0 0;
+}
+
+.ticket__header {
+    font-size: large;
+    padding: 0 0 1rem 0;
+}
+
+.edit-note-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    padding-top: 40px;
+    padding-bottom: 125px;
+   }
