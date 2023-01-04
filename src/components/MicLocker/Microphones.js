@@ -1,9 +1,27 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-export const Microphone = ({ model, brand, serialNumber, image, id, studio, setMicrophones, setFilteredMics }) => {
+export const Microphone = ({ model, brand, serialNumber, image, id, studio, setMicrophones, setFilteredMics, addedMics }) => {
     const [isChecked, setIsChecked] = useState(false)
     const navigate = useNavigate()
+
+    //this useEffect is checking to see if an item is already in the studio
+    useEffect(
+        () => {
+
+            const studioMics = addedMics.find((microphone) =>
+                microphone.microphoneId === id
+            )
+            studioMics ? setIsChecked(true)
+                : setIsChecked(false)
+
+        },
+        [addedMics]
+    )
+
+
+
+
     const handleEdit = (click, microphoneId) => {
         click.preventDefault()
         navigate(`/microphones/edit/${microphoneId}`)
@@ -70,7 +88,7 @@ export const Microphone = ({ model, brand, serialNumber, image, id, studio, setM
             <label>
                 <div className="edit-delete">
                     <button className="btn btn-dark" onClick={(click) => handleEdit(click, id)}>Edit</button>
-           
+
                     <button className="btn btn-danger" onClick={(event) => (handleDelete(event))}>Delete</button>
                 </div>
             </label>

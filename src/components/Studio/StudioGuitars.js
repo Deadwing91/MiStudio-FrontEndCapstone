@@ -1,7 +1,7 @@
 
 
 
-export const StudioGuitars = ({ guitar, id, setGuitars, setRefresh, refresh }) => {
+export const StudioGuitars = ({ guitar, id, setGuitars, setRefresh, refresh, studio, setStudioGuitars }) => {
 
 
     let userId = localStorage.getItem('honey_user')
@@ -21,9 +21,10 @@ export const StudioGuitars = ({ guitar, id, setGuitars, setRefresh, refresh }) =
             method: "DELETE"
         })
             .then(() => {
-                fetch(`http://localhost:8088/studios?userId`)
+                fetch(`http://localhost:8088/studioGuitars?studioId=${studio.id}`)
                     .then(response => response.json())
                     .then(() => {
+                        
 
                     })
             })
@@ -39,15 +40,15 @@ export const StudioGuitars = ({ guitar, id, setGuitars, setRefresh, refresh }) =
         <div className="guitar-item-card">
             <div className="brand-model-text" key={`guitar--${guitar?.id}`}> {<img className="item-img" src={`${guitar?.guitar?.image}`} alt="Picture of a guitar" />}
 
-             
-                    <div className="edit-delete">
-                        <button className="btn btn-danger" onClick={(event) => {
-                            handleDelete(event)
-                            setRefresh(!refresh)
-                        }}>Remove</button>
 
-                    </div>
-               
+                <div className="edit-delete">
+                    <button className="btn btn-danger" onClick={(event) => {
+                        handleDelete(event)
+                        setRefresh(!refresh)
+                    }}>Remove</button>
+
+                </div>
+
 
             </div>
         </div>

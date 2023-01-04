@@ -23,21 +23,21 @@ export const Studio = () => {
                 .then(response => response.json())
                 .then((guitarArray) => {
                     setStudio(guitarArray[0])
-                })
-            fetch(`http://localhost:8088/studios?userId=${user.id}`)
-                .then(response => response.json())
-                .then((drumArray) => {
-                    setStudio(drumArray[0])
-                })
-            fetch(`http://localhost:8088/studios?userId=${user.id}`)
-                .then(response => response.json())
-                .then((micArray) => {
-                    setStudio(micArray[0])
-                })
-            fetch(`http://localhost:8088/studios?userId=${user.id}`)
-                .then(response => response.json())
-                .then((synthArray) => {
-                    setStudio(synthArray[0])
+                // })
+            // fetch(`http://localhost:8088/studios?userId=${user.id}`)
+            //     .then(response => response.json())
+            //     .then((drumArray) => {
+            //         setStudio(drumArray[0])
+            //     })
+            // fetch(`http://localhost:8088/studios?userId=${user.id}`)
+            //     .then(response => response.json())
+            //     .then((micArray) => {
+            //         setStudio(micArray[0])
+            //     })
+            // fetch(`http://localhost:8088/studios?userId=${user.id}`)
+            //     .then(response => response.json())
+            //     .then((synthArray) => {
+            //         setStudio(synthArray[0])
                 })
 
 
@@ -48,29 +48,29 @@ export const Studio = () => {
     useEffect(() => {
 
 
-        fetch(`http://localhost:8088/studioGuitars?_expand=guitar&studioId${studio.id}`)
+        fetch(`http://localhost:8088/studioGuitars?_expand=guitar&studioId=${studio?.id}`)
             .then(response => response.json())
             .then((guitarArray) => {
                 setStudioGuitars(guitarArray)
             })
-        fetch(`http://localhost:8088/studioDrums?_expand=drum&studioId${studio.id}`)
+        fetch(`http://localhost:8088/studioDrums?_expand=drum&studioId=${studio?.id}`)
             .then(response => response.json())
             .then((guitarArray) => {
                 setStudioDrums(guitarArray)
             })
-        fetch(`http://localhost:8088/studioMics?_expand=microphone&studioId${studio.id}`)
+        fetch(`http://localhost:8088/studioMics?_expand=microphone&studioId=${studio?.id}`)
             .then(response => response.json())
             .then((micArray) => {
                 setStudioMics(micArray)
             })
-        fetch(`http://localhost:8088/studioSynths?_expand=synth&studioId${studio.id}`)
+        fetch(`http://localhost:8088/studioSynths?_expand=synth&studioId=${studio?.id}`)
             .then(response => response.json())
             .then((synthArray) => {
                 setStudioSynths(synthArray)
             })
 
 
-    }, [, refresh]);
+    }, [, refresh, studio]);
 
     return(
     <div className="studio">
@@ -78,25 +78,25 @@ export const Studio = () => {
         {/* <h1>Guitars</h1> */}
         <article className="guitars">
             {
-                studioGuitars.map(guitar => <StudioGuitars guitar={guitar} refresh={refresh} setRefresh={setRefresh} key={`guitar--${guitar.id}`} />)
+                studioGuitars.map(guitar => <StudioGuitars guitar={guitar} refresh={refresh} setRefresh={setRefresh} studio={studio} setStudioGuitars={setStudioGuitars} key={`guitar--${guitar.id}`} />)
             }
         </article>
         {/* <h1>Drums</h1> */}
         <article className="guitars">
             {
-                studioDrums.map(drum => <StudioDrums drum={drum} refresh={refresh} setRefresh={setRefresh} key={`drum--${drum.id}`} />)
+                studioDrums.map(drum => <StudioDrums drum={drum} refresh={refresh} setRefresh={setRefresh} studio={studio} setStudioDrums={setStudioDrums} key={`drum--${drum.id}`} />)
             }
         </article>
         {/* <h1>Microphones</h1> */}
         <article className="guitars">
             {
-                studioMics.map(microphone => <StudioMics microphone={microphone} refresh={refresh} setRefresh={setRefresh} key={`microphone--${microphone.id}`} />)
+                studioMics.map(microphone => <StudioMics microphone={microphone} refresh={refresh} setRefresh={setRefresh} studio={studio} setStudioMics={setStudioMics} key={`microphone--${microphone.id}`} />)
             }
         </article>
         {/* <h1>Synthesizers</h1> */}
         <article className="guitars">
             {
-                studioSynths.map(synth => <StudioSynths synth={synth} refresh={refresh} setRefresh={setRefresh} key={`synth--${synth.id}`} />)
+                studioSynths.map(synth => <StudioSynths synth={synth} refresh={refresh} setRefresh={setRefresh} studio={studio} setStudioSynths={setStudioSynths} key={`synth--${synth.id}`} />)
             }
         </article>
 

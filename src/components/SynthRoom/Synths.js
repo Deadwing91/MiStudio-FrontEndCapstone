@@ -1,9 +1,23 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-export const Synth = ({ model, brand, serialNumber, image, id, studio, setSynths, setFilteredSynths }) => {
+export const Synth = ({ model, brand, serialNumber, image, id, studio, setSynths, setFilteredSynths, addedSynths }) => {
     const [isChecked, setIsChecked] = useState(false)
     const navigate = useNavigate()
+
+    useEffect(
+        () => {
+
+            const studioSynths = addedSynths.find((synth) =>
+                synth.synthId === id
+            ) 
+            studioSynths ? setIsChecked(true)
+                : setIsChecked(false)
+
+        },
+        [addedSynths]
+    )
+
     const handleEdit = (click, synthId) => {
         click.preventDefault()
         navigate(`/synths/edit/${synthId}`)
