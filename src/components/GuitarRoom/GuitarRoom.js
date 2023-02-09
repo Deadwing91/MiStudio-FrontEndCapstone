@@ -1,11 +1,23 @@
 import { click } from "@testing-library/user-event/dist/click"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 export const Guitar = ({ model, brand, serialNumber, image, id, setGuitars, setFilteredGuitars, studio, addedGuitars }) => {
     const [isChecked, setIsChecked] = useState(false)
     const navigate = useNavigate()
 
+    useEffect(
+        () => {
+
+            const studioGuitars = addedGuitars.find((guitar) =>
+                guitar.guitarId === id
+            )
+            studioGuitars ? setIsChecked(true)
+                : setIsChecked(false)
+
+        },
+        [addedGuitars]
+    )
 
     const handleEdit = (click, guitarId) => {
         click.preventDefault()
@@ -13,7 +25,7 @@ export const Guitar = ({ model, brand, serialNumber, image, id, setGuitars, setF
     }
 
     const handleAddToStudio = (event, studio) => {
-
+        event.preventDefault()
         const payload = {
             studioId: studio.id,
             guitarId: id
@@ -51,6 +63,8 @@ export const Guitar = ({ model, brand, serialNumber, image, id, setGuitars, setF
             })
     }
 
+
+
     const handleChecked = (event) => {
         if (window.confirm("Are you sure you want to add to studio?")) {
             return handleAddToStudio(event, studio)
@@ -59,7 +73,7 @@ export const Guitar = ({ model, brand, serialNumber, image, id, setGuitars, setF
 
     }
 
-    return  <section className="guitar_room">
+    return <section className="guitar_room">
         <div className="guitar-item-card">
             <div className="brand-model-text">
                 <img className="item-img" src={`${image}`} alt="Picture of a guitar" />
@@ -75,15 +89,15 @@ export const Guitar = ({ model, brand, serialNumber, image, id, setGuitars, setF
             <label>
                 <div className="edit-delete">
                     <button className="btn btn-dark" onClick={(click) => handleEdit(click, id)}>Edit</button>
-               
+
                     <button className="btn btn-danger" onClick={(event) => (handleDelete(event))}>Delete</button>
                 </div>
             </label>
         </div>
-        
+
 
 
 
     </section>
-    
+
 }

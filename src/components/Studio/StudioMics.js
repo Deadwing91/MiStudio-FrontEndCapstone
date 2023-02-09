@@ -1,4 +1,4 @@
-export const StudioMics = ({ microphone, refresh, setRefresh }) => {
+export const StudioMics = ({ microphone, refresh, setRefresh, studio, setStudioMics }) => {
 
 
     const handleDelete = (event) => {
@@ -14,9 +14,10 @@ export const StudioMics = ({ microphone, refresh, setRefresh }) => {
             method: "DELETE"
         })
             .then(() => {
-                fetch(`http://localhost:8088/studioMics`)
+                fetch(`http://localhost:8088/studioMics?studioId=${studio.id}`)
                     .then(response => response.json())
                     .then(() => {
+                        // setStudioMics(newStudioMics)
                     })
             })
     }
@@ -26,12 +27,13 @@ export const StudioMics = ({ microphone, refresh, setRefresh }) => {
 
     return <section className="guitar_room">
         <div className="guitar-item-card">
-            <div key={`microphone--${microphone?.id}`}>{<img className="item-img" src={`${microphone?.microphone?.image}`} alt="Picture of a microphone" />}</div>
+            <div className="brand-model-text" key={`microphone--${microphone?.id}`}>{<img className="item-img" src={`${microphone?.microphone?.image}`} alt="Picture of a microphone" />}
             <div className="edit-delete">
                 <button className="btn btn-danger" onClick={(event) => {
                     handleDelete(event)
                     setRefresh(!refresh)
                 }}>Remove</button>
+            </div>
             </div>
         </div>
     </section>

@@ -1,9 +1,23 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-export const Drum = ({ size, brand, serialNumber, image, id, studio, setDrums, setFilteredDrums }) => {
+export const Drum = ({ size, brand, serialNumber, image, id, studio, setDrums, setFilteredDrums, addedDrums }) => {
     const [isChecked, setIsChecked] = useState(false)
     const navigate = useNavigate()
+
+    //this useEffect is checking to see if an item is already in the studio
+    useEffect(
+        () => {
+
+            const studioDrums = addedDrums.find((drum) =>
+                drum.drumId === id
+            )
+            studioDrums ? setIsChecked(true)
+                : setIsChecked(false)
+
+        },
+        [addedDrums]
+    )
 
 
     const handleEdit = (click, drumId) => {
@@ -75,7 +89,7 @@ export const Drum = ({ size, brand, serialNumber, image, id, studio, setDrums, s
                 <div className="edit-delete">
 
                     <button className="btn btn-dark" onClick={(click) => handleEdit(click, id)}>Edit</button>
-               
+
                     <button className="btn btn-danger" onClick={(event) => (handleDelete(event))}>Delete</button>
 
                 </div>
