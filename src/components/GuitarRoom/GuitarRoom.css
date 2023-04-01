@@ -53,6 +53,8 @@
 .item-img {
     width:350px;
     height:520px;
+    object-fit: contain;
+    background-color: black;
     margin: 6px;
     
     /* box-shadow: 4px 3px 4px gray; */
